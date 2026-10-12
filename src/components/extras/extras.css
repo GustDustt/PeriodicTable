@@ -1,0 +1,287 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section__title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fg-subtle);
+}
+
+.page--wide {
+  max-width: 1120px;
+}
+
+.formula-status {
+  min-height: 28px;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.formula-status__choices {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.formula-status .note {
+  font-size: 0.9rem;
+}
+
+.input--answer {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 700;
+  background: var(--accent-soft);
+}
+
+.input[readonly]:not(.input--answer) {
+  color: var(--fg-muted);
+}
+
+/* ---------- n = m/M ---------- */
+.answer__title {
+  font-size: 1rem;
+  color: var(--fg-muted);
+  margin-bottom: 8px;
+}
+
+.answer__eq {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- mass percent ---------- */
+.bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bar__head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-bottom: 6px;
+}
+
+.bar__sym {
+  font-weight: 800;
+  font-size: 1.1rem;
+  min-width: 2ch;
+}
+
+.bar__name {
+  color: var(--fg-muted);
+}
+
+.bar__calc {
+  color: var(--fg-subtle);
+  font-size: 0.85rem;
+}
+
+.bar__pct {
+  margin-left: auto;
+  font-size: 1.15rem;
+  color: var(--accent);
+}
+
+.bar__track {
+  height: 12px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.bar__fill {
+  height: 100%;
+  border-radius: inherit;
+  transform-origin: left;
+  transition: transform 0.25s var(--ease);
+}
+
+.bar__track.cat-nonmetal .bar__fill {
+  background: var(--cat-nonmetal);
+}
+
+.bar__track.cat-semimetal .bar__fill {
+  background: var(--cat-semimetal);
+}
+
+.bar__track.cat-metal .bar__fill {
+  background: var(--cat-metal);
+}
+
+/* ---------- empirical ---------- */
+.emp-row {
+  display: grid;
+  grid-template-columns: 72px 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.emp-row__sym {
+  text-align: center;
+  font-weight: 700;
+}
+
+.emp-row .unit {
+  min-width: 1.5em;
+}
+
+.emp-row .icon-btn:disabled {
+  opacity: 0.3;
+}
+
+.emp-result {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.emp-result__formula {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.step__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.steps {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- quiz ---------- */
+.quiz__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.quiz__stats {
+  display: flex;
+  gap: 16px;
+  color: var(--fg-muted);
+}
+
+.quiz__stats strong {
+  color: var(--fg);
+}
+
+.quiz__q {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quiz__formula {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.quiz__choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.quiz__choice {
+  min-height: 64px;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.quiz__choice.is-right {
+  border-color: var(--success);
+  background: var(--accent-soft);
+  color: var(--success);
+}
+
+.quiz__choice.is-wrong {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.quiz__choice.is-dim {
+  opacity: 0.55;
+}
+
+.quiz__why {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.quiz__feedback {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.quiz__feedback.is-right {
+  color: var(--success);
+}
+
+.quiz__feedback.is-wrong {
+  color: var(--danger);
+}
+
+/* ---------- more ---------- */
+.linkcard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 64px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.linkcard > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.linkcard svg {
+  color: var(--fg-subtle);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}

@@ -1,0 +1,240 @@
+{
+  "app": {
+    "name": "Molarmasse",
+    "loading": "Laster …",
+    "offlineReady": "Klar til bruk uten nett"
+  },
+  "nav": {
+    "label": "Hovedmeny",
+    "calculator": "Kalkulator",
+    "amount": "n = m/M",
+    "percent": "Masse-%",
+    "table": "Tabell",
+    "more": "Mer"
+  },
+  "calc": {
+    "resultLabel": "Molar masse",
+    "unit": "g/mol",
+    "copy": "Kopier resultatet",
+    "copied": "Kopiert: {{value}}",
+    "copyFailed": "Kunne ikke kopiere",
+    "inputLabel": "Kjemisk formel",
+    "placeholder": "f.eks. H2O",
+    "ion": "ion",
+    "interpreted": "Tolket som {{formula}}",
+    "favouriteAdd": "Legg til i favoritter",
+    "favouriteRemove": "Fjern fra favoritter",
+    "recent": "Nylig",
+    "favourites": "Favoritter",
+    "keyboardNative": "Bruk telefonens tastatur",
+    "keyboardCustom": "Bruk kjemitastaturet",
+    "all": "Alle",
+    "elements": "Grunnstoffer",
+    "keypad": "Kjemitastatur",
+    "backspace": "Slett (hold for å tømme)",
+    "cleared": "Formelen er tømt",
+    "undo": "Angre",
+    "empty": "Skriv eller trykk inn en formel",
+    "examplesLabel": "Prøv:"
+  },
+  "breakdown": {
+    "title": "Utregning",
+    "show": "Vis utregning",
+    "hide": "Skjul utregning",
+    "exact": "Atommasser fra databladet, uten avrunding",
+    "perElement": "Hver atommasse er rundet av til {{mode}} før multiplikasjon",
+    "sum": "Sum",
+    "rounded": "Avrundet",
+    "unstable": "Tall i parentes: massetall for den mest stabile isotopen",
+    "element": "Grunnstoff",
+    "count": "Antall",
+    "mass": "Atommasse",
+    "subtotal": "Masse"
+  },
+  "rounding": {
+    "title": "Avrunding",
+    "open": "Endre avrunding",
+    "exact": "Eksakt",
+    "dp_one": "{{count}} desimal",
+    "dp_other": "{{count}} desimaler",
+    "sf_one": "{{count}} gjeldende siffer",
+    "sf_other": "{{count}} gjeldende sifre",
+    "modeExact": "Eksakt",
+    "modeDp": "Desimaler",
+    "modeSf": "Gjeldende sifre",
+    "digits": "Antall",
+    "perElement": "Rund av hver atommasse først",
+    "perElementHelp": "Av: summen rundes av én gang til slutt. På: hver atommasse rundes av før den ganges med antallet.",
+    "perElementExact": "Gjelder ikke når resultatet vises eksakt.",
+    "perAtomShort": "per atom",
+    "example": "Eksempel: C₆H₁₂O₆ = {{value}} g/mol",
+    "done": "Ferdig"
+  },
+  "errors": {
+    "empty": "Skriv inn en formel",
+    "unknownElement": "Ukjent grunnstoff «{{sym}}» (tegn {{pos}})",
+    "lowercase": "«{{sym}}» skal ha stor forbokstav – mente du «{{suggestion}}»? (tegn {{pos}})",
+    "missingClose": "Mangler lukkende parentes «{{bracket}}» (åpnet på tegn {{pos}})",
+    "unexpectedClose": "Parentesen «{{bracket}}» er ikke åpnet (tegn {{pos}})",
+    "mismatchedClose": "Ventet «{{expected}}», men fant «{{got}}» (tegn {{pos}})",
+    "emptyGroup": "Tom parentes (tegn {{pos}})",
+    "numberWithoutElement": "Et tall alene er ingen formel – skriv et grunnstoff etter det (tegn {{pos}})",
+    "misplacedNumber": "Tallet står på et uventet sted (tegn {{pos}})",
+    "zeroCount": "Antallet kan ikke være 0 (tegn {{pos}})",
+    "incompleteHydrate": "Mangler formel etter prikken for krystallvann (tegn {{pos}})",
+    "unexpectedChar": "Ukjent tegn «{{char}}» (tegn {{pos}})",
+    "chargeNotAtEnd": "Ladningen (+ eller −) må stå helt til slutt (tegn {{pos}})",
+    "badCharge": "Ufullstendig ladning (tegn {{pos}})",
+    "ambiguous": "Flere mulige tolkninger – velg én:"
+  },
+  "keys": {
+    "dot": "Krystallvann-prikk",
+    "plus": "Pluss (ladning)",
+    "minus": "Minus (ladning)",
+    "open": "Venstreparentes",
+    "close": "Høyreparentes",
+    "openSquare": "Venstre hakeparentes",
+    "closeSquare": "Høyre hakeparentes"
+  },
+  "sheet": {
+    "allTitle": "Alle grunnstoffer",
+    "search": "Søk etter navn eller symbol",
+    "close": "Lukk",
+    "noMatch": "Ingen treff"
+  },
+  "amount": {
+    "title": "Stoffmengde",
+    "intro": "Fyll inn to av tre verdier, så regnes den tredje ut.",
+    "formula": "Formel (valgfritt)",
+    "formulaHelp": "Fyller inn M automatisk med valgt avrunding.",
+    "m": "Masse, m",
+    "n": "Stoffmengde, n",
+    "M": "Molar masse, M",
+    "clear": "Tøm alt",
+    "result": "Svar",
+    "needTwo": "Fyll inn to av de tre verdiene.",
+    "tooMany": "Alle tre er fylt inn – tøm feltet du vil regne ut.",
+    "badNumber": "Ugyldig tall i feltet {{field}}.",
+    "divideByZero": "Kan ikke dele på null.",
+    "exactQuotient": "Et delestykke har sjelden et eksakt svar – vist med 6 gjeldende sifre.",
+    "tooSmall": "For lite for valgt antall desimaler – vist med 3 gjeldende sifre.",
+    "fromFormula": "M fra {{formula}}"
+  },
+  "percent": {
+    "title": "Masseprosent",
+    "intro": "Hvor mange prosent av massen hvert grunnstoff utgjør.",
+    "formula": "Formel",
+    "total": "Molar masse: {{value}} g/mol",
+    "share": "Andel"
+  },
+  "empirical": {
+    "title": "Empirisk formel",
+    "intro": "Fra masseprosent eller gram til den enkleste formelen, steg for steg.",
+    "unit": "Enhet",
+    "unitPercent": "Masseprosent",
+    "unitGrams": "Gram",
+    "element": "Grunnstoff",
+    "amount": "Mengde",
+    "addRow": "Legg til grunnstoff",
+    "removeRow": "Fjern {{sym}}",
+    "step1": "1. Del på molar masse: n = m / M",
+    "step2": "2. Del på den minste stoffmengden",
+    "step3": "3. Gang med {{k}} og rund av til hele tall",
+    "step3one": "3. Rund av til hele tall",
+    "result": "Empirisk formel",
+    "fuzzy": "Forholdstallene ligger ikke nær hele tall – sjekk tallene du har skrevet inn.",
+    "sumWarning": "Prosentene summerer til {{sum}} %, ikke 100 %.",
+    "needRows": "Fyll inn minst ett grunnstoff.",
+    "unknownElement": "Ukjent grunnstoff «{{sym}}».",
+    "duplicate": "«{{sym}}» står to ganger.",
+    "badAmount": "Mangler en positiv mengde for {{sym}}."
+  },
+  "table": {
+    "title": "Periodesystem",
+    "nonmetal": "Ikke-metall",
+    "semimetal": "Halvmetall",
+    "metal": "Metall",
+    "atomicNumber": "Atomnummer",
+    "mass": "Atommasse",
+    "electronegativity": "Elektronegativitet",
+    "state": "Tilstand ved 25 °C",
+    "category": "Type",
+    "state_s": "fast stoff",
+    "state_l": "væske",
+    "state_g": "gass",
+    "insert": "Bruk i kalkulatoren",
+    "unstableNote": "Massetall for den mest stabile isotopen",
+    "none": "–",
+    "scrollHint": "Sveip sidelengs for å se hele tabellen.",
+    "fBlock": "{{from}}–{{to}}"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "question": "Hva er den molare massen til",
+    "streak": "Rekke",
+    "best": "Beste",
+    "correct": "Riktig!",
+    "wrong": "Feil – riktig svar er {{value}} g/mol",
+    "next": "Neste",
+    "noHydrate": "Glemt krystallvannet",
+    "wrongCount": "Feil antall {{sym}}",
+    "swapped": "{{swap}} i stedet for {{sym}}",
+    "rounding": "Avrunding: {{mode}}"
+  },
+  "more": {
+    "title": "Mer",
+    "tools": "Flere verktøy",
+    "empiricalDesc": "Fra masseprosent til formel",
+    "quizDesc": "Øv på molar masse",
+    "settings": "Innstillinger",
+    "language": "Språk",
+    "theme": "Tema",
+    "themeSystem": "System",
+    "themeLight": "Lys",
+    "themeDark": "Mørk",
+    "keypad": "Tastatur i kalkulatoren",
+    "keypadCustom": "Kjemitastatur",
+    "keypadNative": "Telefonens",
+    "clearRecent": "Tøm nylig brukte formler",
+    "cleared": "Nylig brukte er tømt",
+    "about": "Om",
+    "aboutText": "Atommassene er hentet fra «Grunnstoffenes periodesystem» i eksamen REA3046 – akkurat som de står trykt. Summen regnes med heltall, så resultatet får aldri avrundingsfeil fra datamaskinen.",
+    "offline": "Fungerer uten nett etter første besøk. Velg «Legg til på hjemskjerm» i nettleseren for å få appen som ikon.",
+    "langNb": "Norsk bokmål",
+    "langEn": "English"
+  },
+  "notFound": {
+    "title": "Fant ikke siden",
+    "back": "Til kalkulatoren"
+  },
+  "seo": {
+    "calculator": {
+      "title": "Molarmasse-kalkulator – med databladets atommasser",
+      "description": "Regn ut molar masse for en kjemisk formel med atommassene fra eksamensdatabladet. Velg avrunding selv og se hele utregningen."
+    },
+    "amount": {
+      "title": "Stoffmengde n = m/M – kalkulator",
+      "description": "Finn stoffmengde, masse eller molar masse når du kjenner to av dem. Viser formelen med tallene satt inn."
+    },
+    "percent": {
+      "title": "Masseprosent – kalkulator",
+      "description": "Se hvor mange prosent av massen hvert grunnstoff i en forbindelse utgjør."
+    },
+    "empirical": {
+      "title": "Empirisk formel fra masseprosent",
+      "description": "Regn ut empirisk formel fra masseprosent eller gram, med alle mellomregningene."
+    },
+    "table": {
+      "title": "Periodesystem med eksamensverdier",
+      "description": "Periodesystemet med atommasse, elektronegativitet og tilstand slik de står i eksamensdatabladet."
+    },
+    "quiz": {
+      "title": "Quiz – molar masse",
+      "description": "Øv på å regne ut molar masse med svaralternativer som ligner vanlige feil."
+    },
+    "more": {
+      "title": "Innstillinger og flere verktøy",
+      "description": "Språk, tema, avrunding og flere kjemiverktøy."
+    }
+  }
+}

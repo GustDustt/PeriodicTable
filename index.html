@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Molarmasse-kalkulator – med databladets atommasser | Molarmasse</title>
+    <meta name="description" content="Regn ut molar masse for en kjemisk formel med atommassene fra eksamensdatabladet. Velg avrunding selv og se hele utregningen." />
+    <meta property="og:locale" content="nb_NO" />
+    <meta name="theme-color" content="#101416" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Molarmasse" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <script>
+      // Runs before first paint so there is no light/dark flash. Mirrors
+      // hooks/useTheme.js; storage access is guarded because it can throw.
+      ;(function () {
+        var theme = 'system'
+        var lang = 'nb'
+        try {
+          var s = JSON.parse(localStorage.getItem('molarmasse-settings') || '{}').state || {}
+          if (s.theme === 'light' || s.theme === 'dark') theme = s.theme
+          if (s.lang === 'en') lang = 'en'
+        } catch (e) {}
+        if (theme === 'system') theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.dataset.theme = theme
+        document.documentElement.lang = lang
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Molarmasse-kalkulatoren trenger JavaScript.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

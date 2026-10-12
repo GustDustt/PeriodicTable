@@ -1,0 +1,56 @@
+.pill {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px 0 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-weight: 600;
+  position: relative;
+}
+
+.pill::after {
+  content: '';
+  position: absolute;
+  inset: -2px 0;
+}
+
+.pill__extra {
+  color: var(--warn);
+}
+
+.rounding {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 8px;
+}
+
+.digits {
+  display: flex;
+  gap: 8px;
+}
+
+.digits__opt {
+  flex: 1;
+  min-height: var(--tap);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.digits__opt[aria-checked='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+.sheet__done {
+  width: 100%;
+  margin-top: 16px;
+}
+

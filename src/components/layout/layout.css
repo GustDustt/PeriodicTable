@@ -1,0 +1,73 @@
+.shell {
+  min-height: 100dvh;
+}
+
+.shell__loading {
+  padding: 24px var(--gutter);
+  color: var(--fg-muted);
+}
+
+.tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: calc(var(--tab-h) + var(--safe-bottom));
+  padding-bottom: var(--safe-bottom);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.tabbar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: var(--tap);
+  color: var(--fg-subtle);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.tabbar__item.is-active {
+  color: var(--accent);
+}
+
+.tabbar__label {
+  white-space: nowrap;
+}
+
+/* Desktop: the same five links become a top bar, content gets the full height. */
+@media (min-width: 900px) {
+  :root {
+    --tab-h: 0px;
+  }
+
+  .shell {
+    padding-top: 64px;
+  }
+
+  .tabbar {
+    top: 0;
+    bottom: auto;
+    height: 64px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    border-top: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tabbar__item {
+    flex-direction: row;
+    gap: 8px;
+    padding: 0 16px;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,82 @@
+.breakdown {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.breakdown__toggle {
+  width: 100%;
+  min-height: var(--tap);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px 0 16px;
+  border: 0;
+  background: transparent;
+  font-weight: 700;
+}
+
+.breakdown__toggle svg {
+  transition: transform 0.15s var(--ease);
+  color: var(--fg-muted);
+}
+
+.breakdown__toggle svg.is-flipped {
+  transform: rotate(180deg);
+}
+
+.breakdown__body {
+  padding: 0 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.breakdown__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.05rem;
+}
+
+.breakdown__table th,
+.breakdown__table td {
+  padding: 5px 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.breakdown__table tbody th {
+  text-align: left;
+  font-weight: 700;
+  width: 3em;
+}
+
+.bd-count {
+  color: var(--fg-muted);
+  padding-right: 8px !important;
+}
+
+.bd-mass {
+  text-align: left !important;
+}
+
+.bd-sub {
+  padding-left: 12px !important;
+}
+
+.breakdown__table tfoot th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--fg-muted);
+}
+
+.breakdown__table tfoot tr:first-child > * {
+  border-top: 1px solid var(--border);
+  padding-top: 8px;
+}
+
+.bd-final td {
+  color: var(--accent);
+  font-weight: 700;
+}
+

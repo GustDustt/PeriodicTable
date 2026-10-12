@@ -1,0 +1,22 @@
+.formula {
+  font-family: var(--font-num);
+  white-space: nowrap;
+}
+
+.formula sub,
+.formula sup {
+  font-size: 0.68em;
+  line-height: 0;
+}
+
+.formula sub {
+  vertical-align: -0.3em;
+}
+
+.formula sup {
+  vertical-align: 0.55em;
+}
+
+.formula__dot {
+  padding: 0 0.12em;
+}

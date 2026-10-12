@@ -1,0 +1,240 @@
+{
+  "app": {
+    "name": "Molar mass",
+    "loading": "Loading …",
+    "offlineReady": "Ready to use offline"
+  },
+  "nav": {
+    "label": "Main menu",
+    "calculator": "Calculator",
+    "amount": "n = m/M",
+    "percent": "Mass %",
+    "table": "Table",
+    "more": "More"
+  },
+  "calc": {
+    "resultLabel": "Molar mass",
+    "unit": "g/mol",
+    "copy": "Copy result",
+    "copied": "Copied: {{value}}",
+    "copyFailed": "Could not copy",
+    "inputLabel": "Chemical formula",
+    "placeholder": "e.g. H2O",
+    "ion": "ion",
+    "interpreted": "Read as {{formula}}",
+    "favouriteAdd": "Add to favourites",
+    "favouriteRemove": "Remove from favourites",
+    "recent": "Recent",
+    "favourites": "Favourites",
+    "keyboardNative": "Use the phone keyboard",
+    "keyboardCustom": "Use the chemistry keypad",
+    "all": "All",
+    "elements": "Elements",
+    "keypad": "Chemistry keypad",
+    "backspace": "Delete (hold to clear)",
+    "cleared": "Formula cleared",
+    "undo": "Undo",
+    "empty": "Type or tap a formula",
+    "examplesLabel": "Try:"
+  },
+  "breakdown": {
+    "title": "Working",
+    "show": "Show working",
+    "hide": "Hide working",
+    "exact": "Atomic masses from the data sheet, unrounded",
+    "perElement": "Each atomic mass rounded to {{mode}} before multiplying",
+    "sum": "Sum",
+    "rounded": "Rounded",
+    "unstable": "Numbers in brackets: mass number of the most stable isotope",
+    "element": "Element",
+    "count": "Count",
+    "mass": "Atomic mass",
+    "subtotal": "Mass"
+  },
+  "rounding": {
+    "title": "Rounding",
+    "open": "Change rounding",
+    "exact": "Exact",
+    "dp_one": "{{count}} decimal place",
+    "dp_other": "{{count}} decimal places",
+    "sf_one": "{{count}} significant figure",
+    "sf_other": "{{count}} significant figures",
+    "modeExact": "Exact",
+    "modeDp": "Decimals",
+    "modeSf": "Sig. figs",
+    "digits": "Digits",
+    "perElement": "Round each atomic mass first",
+    "perElementHelp": "Off: the sum is rounded once at the end. On: each atomic mass is rounded before it is multiplied by the count.",
+    "perElementExact": "Does not apply when the result is shown exactly.",
+    "perAtomShort": "per atom",
+    "example": "Example: C₆H₁₂O₆ = {{value}} g/mol",
+    "done": "Done"
+  },
+  "errors": {
+    "empty": "Enter a formula",
+    "unknownElement": "Unknown element “{{sym}}” (character {{pos}})",
+    "lowercase": "“{{sym}}” needs a capital first letter – did you mean “{{suggestion}}”? (character {{pos}})",
+    "missingClose": "Missing closing bracket “{{bracket}}” (opened at character {{pos}})",
+    "unexpectedClose": "Bracket “{{bracket}}” was never opened (character {{pos}})",
+    "mismatchedClose": "Expected “{{expected}}” but found “{{got}}” (character {{pos}})",
+    "emptyGroup": "Empty brackets (character {{pos}})",
+    "numberWithoutElement": "A number on its own is not a formula – add an element after it (character {{pos}})",
+    "misplacedNumber": "Number in an unexpected place (character {{pos}})",
+    "zeroCount": "A count cannot be 0 (character {{pos}})",
+    "incompleteHydrate": "Missing formula after the hydrate dot (character {{pos}})",
+    "unexpectedChar": "Unknown character “{{char}}” (character {{pos}})",
+    "chargeNotAtEnd": "A charge (+ or −) must come at the very end (character {{pos}})",
+    "badCharge": "Incomplete charge (character {{pos}})",
+    "ambiguous": "Several possible readings – pick one:"
+  },
+  "keys": {
+    "dot": "Hydrate dot",
+    "plus": "Plus (charge)",
+    "minus": "Minus (charge)",
+    "open": "Left parenthesis",
+    "close": "Right parenthesis",
+    "openSquare": "Left square bracket",
+    "closeSquare": "Right square bracket"
+  },
+  "sheet": {
+    "allTitle": "All elements",
+    "search": "Search by name or symbol",
+    "close": "Close",
+    "noMatch": "No matches"
+  },
+  "amount": {
+    "title": "Amount of substance",
+    "intro": "Fill in two of the three values and the third is calculated.",
+    "formula": "Formula (optional)",
+    "formulaHelp": "Fills in M automatically using your rounding.",
+    "m": "Mass, m",
+    "n": "Amount, n",
+    "M": "Molar mass, M",
+    "clear": "Clear all",
+    "result": "Answer",
+    "needTwo": "Fill in two of the three values.",
+    "tooMany": "All three are filled in – clear the one you want to calculate.",
+    "badNumber": "Invalid number in the {{field}} field.",
+    "divideByZero": "Cannot divide by zero.",
+    "exactQuotient": "A division rarely has an exact answer – shown to 6 significant figures.",
+    "tooSmall": "Too small for the chosen decimal places – shown to 3 significant figures.",
+    "fromFormula": "M from {{formula}}"
+  },
+  "percent": {
+    "title": "Mass percent",
+    "intro": "How much of the mass each element makes up.",
+    "formula": "Formula",
+    "total": "Molar mass: {{value}} g/mol",
+    "share": "Share"
+  },
+  "empirical": {
+    "title": "Empirical formula",
+    "intro": "From mass percent or grams to the simplest formula, step by step.",
+    "unit": "Unit",
+    "unitPercent": "Mass percent",
+    "unitGrams": "Grams",
+    "element": "Element",
+    "amount": "Amount",
+    "addRow": "Add element",
+    "removeRow": "Remove {{sym}}",
+    "step1": "1. Divide by molar mass: n = m / M",
+    "step2": "2. Divide by the smallest amount",
+    "step3": "3. Multiply by {{k}} and round to whole numbers",
+    "step3one": "3. Round to whole numbers",
+    "result": "Empirical formula",
+    "fuzzy": "The ratios are not close to whole numbers – check the values you entered.",
+    "sumWarning": "The percentages add up to {{sum}} %, not 100 %.",
+    "needRows": "Fill in at least one element.",
+    "unknownElement": "Unknown element “{{sym}}”.",
+    "duplicate": "“{{sym}}” appears twice.",
+    "badAmount": "Missing a positive amount for {{sym}}."
+  },
+  "table": {
+    "title": "Periodic table",
+    "nonmetal": "Non-metal",
+    "semimetal": "Semi-metal",
+    "metal": "Metal",
+    "atomicNumber": "Atomic number",
+    "mass": "Atomic mass",
+    "electronegativity": "Electronegativity",
+    "state": "State at 25 °C",
+    "category": "Type",
+    "state_s": "solid",
+    "state_l": "liquid",
+    "state_g": "gas",
+    "insert": "Use in calculator",
+    "unstableNote": "Mass number of the most stable isotope",
+    "none": "–",
+    "scrollHint": "Swipe sideways to see the whole table.",
+    "fBlock": "{{from}}–{{to}}"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "question": "What is the molar mass of",
+    "streak": "Streak",
+    "best": "Best",
+    "correct": "Correct!",
+    "wrong": "Wrong – the answer is {{value}} g/mol",
+    "next": "Next",
+    "noHydrate": "Forgot the water of crystallisation",
+    "wrongCount": "Wrong number of {{sym}}",
+    "swapped": "{{swap}} instead of {{sym}}",
+    "rounding": "Rounding: {{mode}}"
+  },
+  "more": {
+    "title": "More",
+    "tools": "More tools",
+    "empiricalDesc": "From mass percent to formula",
+    "quizDesc": "Practise molar mass",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "themeSystem": "System",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "keypad": "Calculator keyboard",
+    "keypadCustom": "Chemistry keypad",
+    "keypadNative": "Phone keyboard",
+    "clearRecent": "Clear recent formulas",
+    "cleared": "Recent formulas cleared",
+    "about": "About",
+    "aboutText": "Atomic masses are taken from the “Grunnstoffenes periodesystem” sheet in the REA3046 exam, exactly as printed. The sum is calculated with integers, so the result never picks up floating-point rounding errors.",
+    "offline": "Works offline after the first visit. Choose “Add to Home Screen” in your browser to get it as an app icon.",
+    "langNb": "Norsk bokmål",
+    "langEn": "English"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "back": "Back to the calculator"
+  },
+  "seo": {
+    "calculator": {
+      "title": "Molar mass calculator – with the exam sheet's atomic masses",
+      "description": "Calculate the molar mass of a chemical formula using the atomic masses from the exam data sheet. Choose your rounding and see the full working."
+    },
+    "amount": {
+      "title": "Amount of substance n = m/M – calculator",
+      "description": "Find amount, mass or molar mass from the other two, with the numbers substituted into the formula."
+    },
+    "percent": {
+      "title": "Mass percent – calculator",
+      "description": "See what percentage of a compound's mass each element makes up."
+    },
+    "empirical": {
+      "title": "Empirical formula from mass percent",
+      "description": "Work out an empirical formula from mass percent or grams, with every step shown."
+    },
+    "table": {
+      "title": "Periodic table with exam values",
+      "description": "The periodic table with atomic mass, electronegativity and state as printed on the exam data sheet."
+    },
+    "quiz": {
+      "title": "Quiz – molar mass",
+      "description": "Practise molar mass with answer options based on common mistakes."
+    },
+    "more": {
+      "title": "Settings and more tools",
+      "description": "Language, theme, rounding and more chemistry tools."
+    }
+  }
+}

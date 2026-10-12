@@ -1,0 +1,5 @@
+# Cloudflare Pages project. Unknown paths fall back to index.html because
+# dist/ has no 404.html (Pages SPA mode), so no _redirects file is needed.
+name = "periodics"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-10-01"
