@@ -80,4 +80,12 @@ describe('periodic layout', () => {
     const cells = new Set(ELEMENTS.map((e) => JSON.stringify(position(e.z))))
     expect(cells.size).toBe(118)
   })
+
+  it('puts La and Ac in group 3, f-block rows start at Ce and Th', () => {
+    expect(position(57)).toEqual({ row: 6, col: 3 })
+    expect(position(89)).toEqual({ row: 7, col: 3 })
+    expect(position(58)).toEqual({ row: 9, col: 4 })
+    expect(position(90)).toEqual({ row: 10, col: 4 })
+    expect(position(72)).toEqual({ row: 6, col: 4 })
+  })
 })

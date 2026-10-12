@@ -10,9 +10,13 @@ export function position(z) {
   if (z <= 36) return { row: 4, col: z - 18 }
   if (z <= 54) return { row: 5, col: z - 36 }
   if (z <= 56) return { row: 6, col: z - 54 }
+  // La and Ac sit in group 3 of the main table, as on the exam sheet; the
+  // f-block rows below then hold 58–71 and 90–103.
+  if (z === 57) return { row: 6, col: 3 }
   if (z <= 71) return { row: 9, col: z - 54 }
   if (z <= 86) return { row: 6, col: z - 68 }
   if (z <= 88) return { row: 7, col: z - 86 }
+  if (z === 89) return { row: 7, col: 3 }
   if (z <= 103) return { row: 10, col: z - 86 }
   return { row: 7, col: z - 100 }
 }

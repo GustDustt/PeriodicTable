@@ -26,8 +26,6 @@ function PeriodicTable({ lang, onSelect, selected }) {
           </button>
         )
       })}
-      <span className="pcell pcell--ref cat-metal" style={{ gridRow: 6, gridColumn: 3 }} aria-hidden="true">57–71</span>
-      <span className="pcell pcell--ref cat-metal" style={{ gridRow: 7, gridColumn: 3 }} aria-hidden="true">89–103</span>
       <span className="ptable__gap" style={{ gridRow: 8, gridColumn: '1 / -1' }} aria-hidden="true" />
     </div>
   )
