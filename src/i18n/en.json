@@ -10,7 +10,9 @@
     "amount": "n = m/M",
     "percent": "Mass %",
     "table": "Table",
-    "more": "More"
+    "more": "More",
+    "sum": "Sum",
+    "reaction": "Reaction"
   },
   "calc": {
     "resultLabel": "Molar mass",
@@ -85,7 +87,15 @@
     "unexpectedChar": "Unknown character “{{char}}” (character {{pos}})",
     "chargeNotAtEnd": "A charge (+ or −) must come at the very end (character {{pos}})",
     "badCharge": "Incomplete charge (character {{pos}})",
-    "ambiguous": "Several possible readings – pick one:"
+    "ambiguous": "Several possible readings – pick one:",
+    "emptyTerm": "Missing a substance after + or − (character {{pos}})",
+    "noArrow": "Missing reaction arrow – write → or -> between the two sides",
+    "twoArrows": "Only one reaction arrow is allowed (character {{pos}})",
+    "emptySpecies": "Missing a substance at + (character {{pos}})",
+    "emptySide": "Both sides of the arrow need at least one substance",
+    "oneSide": "{{sym}} only appears on one side – check the formulas",
+    "cannotBalance": "This equation cannot be balanced – check the formulas",
+    "multipleSolutions": "This equation can be balanced in more than one way – it contains independent reactions"
   },
   "keys": {
     "dot": "Hydrate dot",
@@ -94,7 +104,10 @@
     "open": "Left parenthesis",
     "close": "Right parenthesis",
     "openSquare": "Left square bracket",
-    "closeSquare": "Right square bracket"
+    "closeSquare": "Right square bracket",
+    "add": "Plus",
+    "subtract": "Minus",
+    "times": "Times"
   },
   "sheet": {
     "allTitle": "All elements",
@@ -201,7 +214,10 @@
     "aboutText": "Atomic masses are taken from the “Grunnstoffenes periodesystem” sheet in the REA3046 exam, exactly as printed. The sum is calculated with integers, so the result never picks up floating-point rounding errors.",
     "offline": "Works offline after the first visit. Choose “Add to Home Screen” in your browser to get it as an app icon.",
     "langNb": "Norsk bokmål",
-    "langEn": "English"
+    "langEn": "English",
+    "amountDesc": "Amount, mass or molar mass",
+    "percentDesc": "Share of the mass per element",
+    "concDesc": "c = n/V, mass for a solution and dilution"
   },
   "notFound": {
     "title": "Page not found",
@@ -235,6 +251,67 @@
     "more": {
       "title": "Settings and more tools",
       "description": "Language, theme, rounding and more chemistry tools."
+    },
+    "sum": {
+      "title": "Molar mass as a sum – Na + Cl + O × 2",
+      "description": "Write the atoms out as a sum and get the molar mass with the data sheet values and the full working."
+    },
+    "reaction": {
+      "title": "Balance chemical equations and stoichiometry",
+      "description": "Balance chemical equations automatically and work out masses, amounts and the limiting reactant."
+    },
+    "conc": {
+      "title": "Concentration and dilution – c = n/V and c₁V₁ = c₂V₂",
+      "description": "Work out concentration, amount, volume and mass, and dilution with c₁V₁ = c₂V₂ – with the full working."
     }
+  },
+  "sum": {
+    "inputLabel": "Sum of substances",
+    "placeholder": "e.g. Na + Cl + O × 2",
+    "help": "Write the substances as a sum: Na + Cl + O × 2. Use × or * for a count and − to subtract. Each term can be an element or a whole formula.",
+    "term": "Term"
+  },
+  "reaction": {
+    "title": "Chemical equation",
+    "intro": "Type a reaction and it is balanced. Enter a mass to work out the rest.",
+    "inputLabel": "Reaction",
+    "quick": "Insert symbol",
+    "balanced": "Balanced equation",
+    "copy": "Copy the equation",
+    "check": "Check: the same number of atoms on each side",
+    "left": "Left",
+    "right": "Right",
+    "charge": "Charge",
+    "stoichTitle": "Stoichiometry",
+    "stoichIntro": "Enter the mass of one or more substances. With two reactants the limiting one is found.",
+    "reactant": "reactant",
+    "product": "product",
+    "limiting": "Limiting",
+    "massOf": "Mass of {{formula}} in grams",
+    "excess": "Left over: {{m}} g ({{n}} mol)",
+    "badNumber": "Invalid number in one of the masses."
+  },
+  "conc": {
+    "title": "Concentration",
+    "tabC": "c = n / V",
+    "tabD": "Dilution",
+    "introC": "Fill in what you know and the rest is worked out. With a formula or M you can go via the mass.",
+    "introD": "Fill in three of the four values and the last is worked out.",
+    "V": "Volume, V",
+    "c": "Concentration, c",
+    "volumeUnit": "Volume unit",
+    "working": "Working",
+    "c1": "Concentration before, c₁",
+    "V1": "Volume before, V₁",
+    "c2": "Concentration after, c₂",
+    "V2": "Volume after, V₂",
+    "anyUnit": "mL / L",
+    "sameUnit": "V₁ and V₂ must use the same unit (both mL or both L).",
+    "badNumber": "Invalid number in the {{field}} field.",
+    "needTwo": "Fill in at least two values.",
+    "nothingToSolve": "Nothing to work out – clear the field you want to find.",
+    "divideByZero": "Cannot divide by zero.",
+    "needThree": "Fill in three of the four values.",
+    "tooMany": "All four are filled in – clear the one you want to work out."
   }
 }

@@ -5,11 +5,11 @@ import Icon from '../ui/Icon.jsx'
 // inputMode="none" while the chemistry keypad is shown: the field keeps its
 // caret (tap to move it) but the OS keyboard stays down and the screen stays
 // visible.
-const FormulaField = forwardRef(function FormulaField({ value, onChange, keypadOn, onToggleKeypad, onEnter }, ref) {
+const FormulaField = forwardRef(function FormulaField({ value, onChange, keypadOn, onToggleKeypad, onEnter, label, placeholder }, ref) {
   const { t } = useTranslation()
   return (
     <div className="field-wrap">
-      <label className="visually-hidden" htmlFor="formula">{t('calc.inputLabel')}</label>
+      <label className="visually-hidden" htmlFor="formula">{label ?? t('calc.inputLabel')}</label>
       <input
         ref={ref}
         id="formula"
@@ -25,7 +25,7 @@ const FormulaField = forwardRef(function FormulaField({ value, onChange, keypadO
         autoCorrect="off"
         autoCapitalize="off"
         spellCheck={false}
-        placeholder={t('calc.placeholder')}
+        placeholder={placeholder ?? t('calc.placeholder')}
       />
       <button
         type="button"

@@ -4,4 +4,4 @@ export const SITE_NAME = 'Molarmasse'
 export const SITE_URL = 'https://periodics.pages.dev'
 
 // Indexable routes, in sitemap order.
-export const PUBLIC_PATHS = ['/', '/stoffmengde', '/masseprosent', '/empirisk', '/periodesystem', '/quiz', '/mer']
+export const PUBLIC_PATHS = ['/', '/sum', '/reaksjon', '/stoffmengde', '/konsentrasjon', '/masseprosent', '/empirisk', '/periodesystem', '/quiz', '/mer']

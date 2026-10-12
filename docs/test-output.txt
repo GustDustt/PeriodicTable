@@ -1,34 +1,7 @@
 
  RUN  v5.0.4 C:/Users/User/Documents/Klientai/Chemistry
 
- ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 18.016 to 0 dp = 18 2ms
- ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 18.016 to 1 dp = 18.0 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 18.016 to 2 dp = 18.02 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 18.016 to 3 dp = 18.016 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 18.016 to 4 dp = 18.0160 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 2.5 to 0 dp = 3 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 2.45 to 1 dp = 2.5 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 0.125 to 2 dp = 0.13 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — decimal places > -2.5 to 0 dp = -3 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — decimal places > -0.004 to 2 dp = 0.00 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 249.7 to 2 dp = 249.70 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 18.016 to 3 s.f. = 18.0 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 18.016 to 2 s.f. = 18 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 18.016 to 1 s.f. = 20 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 18.016 to 6 s.f. = 18.0160 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 342.17 to 2 s.f. = 340 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 99.96 to 3 s.f. = 100 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 0.052 to 1 s.f. = 0.05 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 0.0525 to 2 s.f. = 0.053 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 180.156 to 4 s.f. = 180.2 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 1.008 to 3 s.f. = 1.01 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 0 to 3 s.f. = 0.00 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — misc > exact mode returns the value untouched 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — misc > accepts comma decimals 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — misc > clamps out-of-range modes 1ms
- ✓ src/lib/__tests__/rounding.test.js > round — misc > rejects garbage 0ms
- ✓ src/lib/__tests__/rounding.test.js > round — misc > divides exactly enough 0ms
- ✓ src/lib/__tests__/formula.test.js > parseFormula — basics > parses simple formulas 4ms
+ ✓ src/lib/__tests__/formula.test.js > parseFormula — basics > parses simple formulas 3ms
  ✓ src/lib/__tests__/formula.test.js > parseFormula — basics > handles nested () and [] 1ms
  ✓ src/lib/__tests__/formula.test.js > parseFormula — basics > treats ·, * and . as hydrate separators 1ms
  ✓ src/lib/__tests__/formula.test.js > parseFormula — basics > applies a leading coefficient to everything 0ms
@@ -60,7 +33,34 @@
  ✓ src/lib/__tests__/formula.test.js > parseFormula — errors > H2O! -> unexpectedChar at 4 0ms
  ✓ src/lib/__tests__/formula.test.js > parseFormula — errors > reports positions in the original input, whitespace included 0ms
  ✓ src/lib/__tests__/formula.test.js > displayTokens > marks counts vs coefficients and never throws on partial input 1ms
- ✓ src/lib/__tests__/mass.test.js > molar mass — exam sheet values, integer arithmetic > H2O 3ms
+ ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 18.016 to 0 dp = 18 3ms
+ ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 18.016 to 1 dp = 18.0 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 18.016 to 2 dp = 18.02 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 18.016 to 3 dp = 18.016 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 18.016 to 4 dp = 18.0160 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 2.5 to 0 dp = 3 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 2.45 to 1 dp = 2.5 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 0.125 to 2 dp = 0.13 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — decimal places > -2.5 to 0 dp = -3 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — decimal places > -0.004 to 2 dp = 0.00 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — decimal places > 249.7 to 2 dp = 249.70 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 18.016 to 3 s.f. = 18.0 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 18.016 to 2 s.f. = 18 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 18.016 to 1 s.f. = 20 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 18.016 to 6 s.f. = 18.0160 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 342.17 to 2 s.f. = 340 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 99.96 to 3 s.f. = 100 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 0.052 to 1 s.f. = 0.05 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 0.0525 to 2 s.f. = 0.053 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 180.156 to 4 s.f. = 180.2 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 1.008 to 3 s.f. = 1.01 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — significant figures > 0 to 3 s.f. = 0.00 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — misc > exact mode returns the value untouched 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — misc > accepts comma decimals 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — misc > clamps out-of-range modes 1ms
+ ✓ src/lib/__tests__/rounding.test.js > round — misc > rejects garbage 0ms
+ ✓ src/lib/__tests__/rounding.test.js > round — misc > divides exactly enough 0ms
+ ✓ src/lib/__tests__/mass.test.js > molar mass — exam sheet values, integer arithmetic > H2O 5ms
  ✓ src/lib/__tests__/mass.test.js > molar mass — exam sheet values, integer arithmetic > NaCl -> 58.44 0ms
  ✓ src/lib/__tests__/mass.test.js > molar mass — exam sheet values, integer arithmetic > C6H12O6 -> 180.156 0ms
  ✓ src/lib/__tests__/mass.test.js > molar mass — exam sheet values, integer arithmetic > Ca(OH)2 -> 74.096 0ms
@@ -80,19 +80,48 @@
  ✓ src/lib/__tests__/mass.test.js > molar mass — exam sheet values, integer arithmetic > per-element is not applied in exact mode 0ms
  ✓ src/lib/__tests__/mass.test.js > molar mass — exam sheet values, integer arithmetic > returns no result for an invalid formula 0ms
  ✓ src/lib/__tests__/mass.test.js > data file > has 118 elements with string masses 3ms
+ ✓ src/lib/__tests__/reaction.test.js > parseExpression / expressionMass > Na + Cl + O * 2 7ms
+ ✓ src/lib/__tests__/reaction.test.js > parseExpression / expressionMass > accepts ×, leading multipliers and formulas as terms 2ms
+ ✓ src/lib/__tests__/reaction.test.js > parseExpression / expressionMass > keeps hydrates intact and supports subtraction 1ms
+ ✓ src/lib/__tests__/reaction.test.js > parseExpression / expressionMass > matches the single-formula result for the same atoms 0ms
+ ✓ src/lib/__tests__/reaction.test.js > parseExpression / expressionMass > reports empty terms and bad formulas at the right place 1ms
+ ✓ src/lib/__tests__/reaction.test.js > parseExpression / expressionMass > offers readings for an ambiguous lowercase term, with its range 1ms
+ ✓ src/lib/__tests__/reaction.test.js > parseExpression / expressionMass > formats as text 1ms
+ ✓ src/lib/__tests__/reaction.test.js > parseEquation + balance > Fe + O2 -> Fe2O3 2ms
+ ✓ src/lib/__tests__/reaction.test.js > parseEquation + balance > H2 + O2 → H2O 1ms
+ ✓ src/lib/__tests__/reaction.test.js > parseEquation + balance > C3H8 + O2 = CO2 + H2O 1ms
+ ✓ src/lib/__tests__/reaction.test.js > parseEquation + balance > Al + HCl -> AlCl3 + H2 0ms
+ ✓ src/lib/__tests__/reaction.test.js > parseEquation + balance > KMnO4 + HCl -> KCl + MnCl2 + H2O + Cl2 1ms
+ ✓ src/lib/__tests__/reaction.test.js > parseEquation + balance > Fe+O2->Fe2O3 0ms
+ ✓ src/lib/__tests__/reaction.test.js > parseEquation + balance > CuSO4·5H2O -> CuSO4 + H2O 0ms
+ ✓ src/lib/__tests__/reaction.test.js > parseEquation + balance > Ca(OH)2 + H3PO4 -> Ca3(PO4)2 + H2O 0ms
+ ✓ src/lib/__tests__/reaction.test.js > parseEquation + balance > balances ionic equations using charge 3ms
+ ✓ src/lib/__tests__/reaction.test.js > parseEquation + balance > ignores coefficients the student already typed 0ms
+ ✓ src/lib/__tests__/reaction.test.js > parseEquation + balance > explains what is wrong 1ms
+ ✓ src/lib/__tests__/reaction.test.js > stoichiometry > mass of product from one reactant 1ms
+ ✓ src/lib/__tests__/reaction.test.js > stoichiometry > finds the limiting reactant and the excess 1ms
+ ✓ src/lib/__tests__/reaction.test.js > stoichiometry > needs at least one mass 1ms
+ ✓ src/lib/__tests__/reaction.test.js > equationText > writes subscripts, charges and coefficients 1ms
+ ✓ src/lib/__tests__/concentration.test.js > solveConcentration > c from n and V 3ms
+ ✓ src/lib/__tests__/concentration.test.js > solveConcentration > chains m → n → c with V in mL 1ms
+ ✓ src/lib/__tests__/concentration.test.js > solveConcentration > mass needed for a solution: c, V, M → n → m 0ms
+ ✓ src/lib/__tests__/concentration.test.js > solveConcentration > V from n and c, returned in mL when asked 0ms
+ ✓ src/lib/__tests__/concentration.test.js > solveConcentration > validates 1ms
+ ✓ src/lib/__tests__/concentration.test.js > solveDilution > solves each of the four 1ms
+ ✓ src/lib/__tests__/concentration.test.js > solveDilution > validates 0ms
  ✓ src/lib/__tests__/extras.test.js > solveAmount (n = m / M) > solves n 4ms
  ✓ src/lib/__tests__/extras.test.js > solveAmount (n = m / M) > solves m and M 1ms
  ✓ src/lib/__tests__/extras.test.js > solveAmount (n = m / M) > falls back to s.f. instead of showing 0 0ms
- ✓ src/lib/__tests__/extras.test.js > solveAmount (n = m / M) > validates 1ms
+ ✓ src/lib/__tests__/extras.test.js > solveAmount (n = m / M) > validates 0ms
  ✓ src/lib/__tests__/extras.test.js > massPercent > water is 11.19 % H, 88.81 % O 2ms
  ✓ src/lib/__tests__/extras.test.js > empiricalFormula > CH2O from glucose percentages 1ms
  ✓ src/lib/__tests__/extras.test.js > empiricalFormula > multiplies to whole numbers (Fe2O3) 0ms
  ✓ src/lib/__tests__/extras.test.js > empiricalFormula > reports bad rows 0ms
- ✓ src/lib/__tests__/extras.test.js > quiz > has one correct answer and distinct choices 15ms
+ ✓ src/lib/__tests__/extras.test.js > quiz > has one correct answer and distinct choices 16ms
  ✓ src/lib/__tests__/extras.test.js > periodic layout > puts every element in a unique cell 1ms
 
- Test Files  4 passed (4)
-      Tests  89 passed (89)
-   Start at  22:58:46
-   Duration  271ms (import 38%, tests 27%, transform 24%, worker 10%, environment 1%)
+ Test Files  6 passed (6)
+      Tests  118 passed (118)
+   Start at  23:25:48
+   Duration  293ms (import 37%, transform 27%, tests 25%, worker 10%)
 

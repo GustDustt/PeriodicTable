@@ -10,7 +10,9 @@
     "amount": "n = m/M",
     "percent": "Masse-%",
     "table": "Tabell",
-    "more": "Mer"
+    "more": "Mer",
+    "sum": "Sum",
+    "reaction": "Reaksjon"
   },
   "calc": {
     "resultLabel": "Molar masse",
@@ -85,7 +87,15 @@
     "unexpectedChar": "Ukjent tegn «{{char}}» (tegn {{pos}})",
     "chargeNotAtEnd": "Ladningen (+ eller −) må stå helt til slutt (tegn {{pos}})",
     "badCharge": "Ufullstendig ladning (tegn {{pos}})",
-    "ambiguous": "Flere mulige tolkninger – velg én:"
+    "ambiguous": "Flere mulige tolkninger – velg én:",
+    "emptyTerm": "Mangler et stoff etter + eller − (tegn {{pos}})",
+    "noArrow": "Mangler reaksjonspil – skriv → eller -> mellom venstre og høyre side",
+    "twoArrows": "Bare én reaksjonspil er tillatt (tegn {{pos}})",
+    "emptySpecies": "Mangler et stoff ved + (tegn {{pos}})",
+    "emptySide": "Begge sider av pila må ha minst ett stoff",
+    "oneSide": "{{sym}} finnes bare på den ene siden – sjekk formlene",
+    "cannotBalance": "Likningen kan ikke balanseres – sjekk formlene",
+    "multipleSolutions": "Likningen kan balanseres på flere måter – den består av flere uavhengige reaksjoner"
   },
   "keys": {
     "dot": "Krystallvann-prikk",
@@ -94,7 +104,10 @@
     "open": "Venstreparentes",
     "close": "Høyreparentes",
     "openSquare": "Venstre hakeparentes",
-    "closeSquare": "Høyre hakeparentes"
+    "closeSquare": "Høyre hakeparentes",
+    "add": "Pluss",
+    "subtract": "Minus",
+    "times": "Ganger"
   },
   "sheet": {
     "allTitle": "Alle grunnstoffer",
@@ -201,7 +214,10 @@
     "aboutText": "Atommassene er hentet fra «Grunnstoffenes periodesystem» i eksamen REA3046 – akkurat som de står trykt. Summen regnes med heltall, så resultatet får aldri avrundingsfeil fra datamaskinen.",
     "offline": "Fungerer uten nett etter første besøk. Velg «Legg til på hjemskjerm» i nettleseren for å få appen som ikon.",
     "langNb": "Norsk bokmål",
-    "langEn": "English"
+    "langEn": "English",
+    "amountDesc": "Stoffmengde, masse eller molar masse",
+    "percentDesc": "Andel av massen per grunnstoff",
+    "concDesc": "c = n/V, masse til løsning og fortynning"
   },
   "notFound": {
     "title": "Fant ikke siden",
@@ -235,6 +251,67 @@
     "more": {
       "title": "Innstillinger og flere verktøy",
       "description": "Språk, tema, avrunding og flere kjemiverktøy."
+    },
+    "sum": {
+      "title": "Molar masse som sum – Na + Cl + O × 2",
+      "description": "Skriv atomene ut som en sum og få molar masse med databladets atommasser og hele utregningen."
+    },
+    "reaction": {
+      "title": "Balansere reaksjonslikninger og støkiometri",
+      "description": "Balanser reaksjonslikninger automatisk og regn ut masser, stoffmengder og begrensende reaktant."
+    },
+    "conc": {
+      "title": "Konsentrasjon og fortynning – c = n/V og c₁V₁ = c₂V₂",
+      "description": "Regn ut konsentrasjon, stoffmengde, volum og masse, og fortynning med c₁V₁ = c₂V₂ – med hele utregningen."
     }
+  },
+  "sum": {
+    "inputLabel": "Sum av stoffer",
+    "placeholder": "f.eks. Na + Cl + O × 2",
+    "help": "Skriv stoffene som en sum: Na + Cl + O × 2. Bruk × eller * for antall, og − for å trekke fra. Hvert ledd kan være et grunnstoff eller en hel formel.",
+    "term": "Ledd"
+  },
+  "reaction": {
+    "title": "Reaksjonslikning",
+    "intro": "Skriv en reaksjon, så balanseres den. Fyll inn en masse for å regne ut resten.",
+    "inputLabel": "Reaksjon",
+    "quick": "Sett inn tegn",
+    "balanced": "Balansert likning",
+    "copy": "Kopier likningen",
+    "check": "Kontroll: like mange atomer på hver side",
+    "left": "Venstre",
+    "right": "Høyre",
+    "charge": "Ladning",
+    "stoichTitle": "Støkiometri",
+    "stoichIntro": "Skriv inn massen til ett eller flere stoffer. Med to reaktanter finner vi den begrensende.",
+    "reactant": "reaktant",
+    "product": "produkt",
+    "limiting": "Begrensende",
+    "massOf": "Masse av {{formula}} i gram",
+    "excess": "Til overs: {{m}} g ({{n}} mol)",
+    "badNumber": "Ugyldig tall i en av massene."
+  },
+  "conc": {
+    "title": "Konsentrasjon",
+    "tabC": "c = n / V",
+    "tabD": "Fortynning",
+    "introC": "Fyll inn det du vet – resten regnes ut. Med formel eller M kan du gå via massen.",
+    "introD": "Fyll inn tre av de fire verdiene, så regnes den siste ut.",
+    "V": "Volum, V",
+    "c": "Konsentrasjon, c",
+    "volumeUnit": "Volumenhet",
+    "working": "Utregning",
+    "c1": "Konsentrasjon før, c₁",
+    "V1": "Volum før, V₁",
+    "c2": "Konsentrasjon etter, c₂",
+    "V2": "Volum etter, V₂",
+    "anyUnit": "mL / L",
+    "sameUnit": "V₁ og V₂ må ha samme enhet (begge mL eller begge L).",
+    "badNumber": "Ugyldig tall i feltet {{field}}.",
+    "needTwo": "Fyll inn minst to verdier.",
+    "nothingToSolve": "Ingenting å regne ut – tøm feltet du vil finne.",
+    "divideByZero": "Kan ikke dele på null.",
+    "needThree": "Fyll inn tre av de fire verdiene.",
+    "tooMany": "Alle fire er fylt inn – tøm feltet du vil regne ut."
   }
 }

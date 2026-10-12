@@ -32,6 +32,13 @@ const SHOTS = [
   { name: '12-periodesystem', path: '/periodesystem' },
   { name: '13-quiz', path: '/quiz' },
   { name: '14-mer', path: '/mer' },
+  { name: '15-sum-keypad', path: '/sum', steps: ['tap:Na', 'tap:+', 'tap:Cl', 'tap:+', 'tap:O', 'tap:×', 'tap:2'] },
+  { name: '16-sum-empty', path: '/sum' },
+  { name: '17-reaction-balanced', path: '/reaksjon', steps: ['type:#equation:Fe + O2 -> Fe2O3', 'type:[name=mass-0]:10'] },
+  { name: '18-reaction-limiting', path: '/reaksjon', steps: ['type:#equation:H2 + O2 -> H2O', 'type:[name=mass-0]:1', 'type:[name=mass-1]:16', 'scroll:.stoich'] },
+  { name: '20-konsentrasjon', path: '/konsentrasjon', steps: ['type:#conc-m:5,844', 'type:#conc-M:58.44', 'type:#conc-V:250'] },
+  { name: '21-fortynning', path: '/konsentrasjon', steps: ['click:.segmented__opt:nth-child(2)', 'type:#dil-c1:2', 'type:#dil-V1:50', 'type:#dil-c2:0,5'] },
+  { name: '19-reaction-ionic', path: '/reaksjon', steps: ['type:#equation:Cu + Ag+ -> Cu2+ + Ag'] },
 ]
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
@@ -96,6 +103,21 @@ async function main() {
           const label = step.slice(4)
           await evaluate(`(() => { const b = [...document.querySelectorAll('.key, .elchip')].find(b => b.textContent.trim() === ${JSON.stringify(label)}); if (!b) throw new Error('no key ${label}'); b.click(); return true })()`)
           await sleep(60)
+        } else if (step.startsWith('type:')) {
+          // React tracks input values itself, so set through the native setter
+          // and fire 'input' the way a real keystroke would.
+          const [, sel, ...rest] = step.split(':')
+          await evaluate(`(() => {
+            const el = document.querySelector(${JSON.stringify(sel)})
+            const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set
+            set.call(el, ${JSON.stringify(rest.join(':'))})
+            el.dispatchEvent(new Event('input', { bubbles: true }))
+            return true
+          })()`)
+          await sleep(150)
+        } else if (step.startsWith('scroll:')) {
+          await evaluate(`document.querySelector(${JSON.stringify(step.slice(7))}).scrollIntoView(); true`)
+          await sleep(150)
         } else if (step.startsWith('click:')) {
           await evaluate(`document.querySelector(${JSON.stringify(step.slice(6))}).click(); true`)
           await sleep(200)

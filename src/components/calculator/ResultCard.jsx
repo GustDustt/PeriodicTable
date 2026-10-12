@@ -2,11 +2,26 @@ import Formula from '../chem/Formula.jsx'
 import Icon from '../ui/Icon.jsx'
 import { useFormat } from '../../hooks/useFormat.js'
 
-const EXAMPLES = ['H2O', 'NaCl', 'Ca(OH)2', 'CuSO4·5H2O']
+const DEFAULT_EXAMPLES = ['H2O', 'NaCl', 'Ca(OH)2', 'CuSO4·5H2O']
 
 // The answer, huge and always on screen. Below it: the formula as it will be
 // written (H₂O), or exactly what is wrong with the input and where.
-export default function ResultCard({ formula, parsed, result, canonical, favourite, onToggleFavourite, onCopy, onPick }) {
+// `rendered` replaces the formula line (the sum calculator draws its own);
+// `showFavourite` hides the star where there is no favourites list.
+export default function ResultCard({
+  formula,
+  parsed,
+  result,
+  canonical,
+  favourite,
+  onToggleFavourite,
+  onCopy,
+  onPick,
+  rendered,
+  examples = DEFAULT_EXAMPLES,
+  showFavourite = true,
+  renderExample = (f) => <Formula value={f} />,
+}) {
   const { t, num, errorText } = useFormat()
   const empty = !formula.trim()
   const value = result ? num(result.value) : '–'
@@ -17,16 +32,18 @@ export default function ResultCard({ formula, parsed, result, canonical, favouri
         <span className="result__label">{t('calc.resultLabel')}</span>
         {parsed.ok && parsed.ion && <span className="badge">{t('calc.ion')}</span>}
         <span className="result__spacer" />
-        <button
-          type="button"
-          className="icon-btn"
-          onClick={onToggleFavourite}
-          disabled={!canonical}
-          aria-pressed={favourite}
-          aria-label={favourite ? t('calc.favouriteRemove') : t('calc.favouriteAdd')}
-        >
-          <Icon name="star" filled={favourite} />
-        </button>
+        {showFavourite && (
+          <button
+            type="button"
+            className="icon-btn"
+            onClick={onToggleFavourite}
+            disabled={!canonical}
+            aria-pressed={favourite}
+            aria-label={favourite ? t('calc.favouriteRemove') : t('calc.favouriteAdd')}
+          >
+            <Icon name="star" filled={favourite} />
+          </button>
+        )}
         <button type="button" className="icon-btn result__copy" onClick={onCopy} disabled={!result} aria-label={t('calc.copy')}>
           <Icon name="copy" />
         </button>
@@ -40,15 +57,15 @@ export default function ResultCard({ formula, parsed, result, canonical, favouri
         {empty ? (
           <div className="result__choices">
             <span className="result__hint">{t('calc.examplesLabel')}</span>
-            {EXAMPLES.map((f) => (
+            {examples.map((f) => (
               <button key={f} type="button" className="chip" onClick={() => onPick(f)}>
-                <Formula value={f} />
+                {renderExample(f)}
               </button>
             ))}
           </div>
         ) : parsed.ok ? (
           <>
-            <Formula value={canonical} className="result__chem" />
+            {rendered ?? <Formula value={canonical} className="result__chem" />}
             {parsed.interpreted && <span className="result__note">{t('calc.interpreted', { formula: parsed.interpreted })}</span>}
           </>
         ) : parsed.candidates ? (

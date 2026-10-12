@@ -3,14 +3,15 @@ import { useTranslation } from 'react-i18next'
 import Icon from '../ui/Icon.jsx'
 import './layout.css'
 
-// Max five tabs; the calculator is always first. Empirical formula and quiz
-// live under "Mer" to keep the bar at five.
+// Max five tabs; the calculator is always first. The two calculators and the
+// reaction tool get their own tabs; single-purpose tools live under "Mer",
+// which stays highlighted on those routes.
 const TABS = [
   { to: '/', icon: 'calc', key: 'calculator', end: true },
-  { to: '/stoffmengde', icon: 'flask', key: 'amount' },
-  { to: '/masseprosent', icon: 'percent', key: 'percent' },
+  { to: '/sum', icon: 'sigma', key: 'sum' },
+  { to: '/reaksjon', icon: 'reaction', key: 'reaction' },
   { to: '/periodesystem', icon: 'table', key: 'table' },
-  { to: '/mer', icon: 'more', key: 'more', also: ['/empirisk', '/quiz'] },
+  { to: '/mer', icon: 'more', key: 'more', also: ['/stoffmengde', '/konsentrasjon', '/masseprosent', '/empirisk', '/quiz'] },
 ]
 
 export default function TabBar({ pathname }) {

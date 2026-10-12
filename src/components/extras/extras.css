@@ -272,6 +272,7 @@
 }
 
 .linkcard > span {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -279,6 +280,11 @@
 
 .linkcard svg {
   color: var(--fg-subtle);
+  flex: none;
+}
+
+.linkcard .linkcard__icon {
+  color: var(--accent);
 }
 
 .btn:disabled {

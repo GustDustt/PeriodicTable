@@ -17,6 +17,8 @@ const PATHS = {
   plus: 'M12 5v14M5 12h14',
   trash: 'M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3',
   arrow: 'M9 6l6 6-6 6',
+  sigma: 'M18 5H6l6 7-6 7h12',
+  reaction: 'M3 9h14M13 5l4 4-4 4M21 15H7M11 11l-4 4 4 4',
 }
 
 export default function Icon({ name, size = 22, filled = false, ...rest }) {

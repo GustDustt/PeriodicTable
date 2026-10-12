@@ -9,6 +9,14 @@ import { useHistory } from '../store/history.js'
 import { useToast } from '../store/toast.js'
 import '../components/extras/extras.css'
 
+const TOOLS = [
+  { to: '/stoffmengde', icon: 'flask', title: 'amount.title', desc: 'more.amountDesc' },
+  { to: '/konsentrasjon', icon: 'flask', title: 'conc.title', desc: 'more.concDesc' },
+  { to: '/masseprosent', icon: 'percent', title: 'percent.title', desc: 'more.percentDesc' },
+  { to: '/empirisk', icon: 'calc', title: 'empirical.title', desc: 'more.empiricalDesc' },
+  { to: '/quiz', icon: 'check', title: 'quiz.title', desc: 'more.quizDesc' },
+]
+
 export default function Mer() {
   const { t } = useFormat()
   const lang = useSettings((s) => s.lang)
@@ -28,20 +36,16 @@ export default function Mer() {
 
       <section className="stack">
         <h2 className="section__title">{t('more.tools')}</h2>
-        <Link to="/empirisk" className="card linkcard">
-          <span>
-            <strong>{t('empirical.title')}</strong>
-            <span className="note">{t('more.empiricalDesc')}</span>
-          </span>
-          <Icon name="arrow" />
-        </Link>
-        <Link to="/quiz" className="card linkcard">
-          <span>
-            <strong>{t('quiz.title')}</strong>
-            <span className="note">{t('more.quizDesc')}</span>
-          </span>
-          <Icon name="arrow" />
-        </Link>
+        {TOOLS.map((tool) => (
+          <Link key={tool.to} to={tool.to} className="card linkcard">
+            <Icon name={tool.icon} className="linkcard__icon" />
+            <span>
+              <strong>{t(tool.title)}</strong>
+              <span className="note">{t(tool.desc)}</span>
+            </span>
+            <Icon name="arrow" />
+          </Link>
+        ))}
       </section>
 
       <section className="stack">
